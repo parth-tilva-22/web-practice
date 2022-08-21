@@ -1,0 +1,225 @@
+@font-face {
+    font-family: interGoogle;
+    src: url(static/Inter-Regular.ttf);
+}
+
+
+body {
+    margin: 5px 5px 0px 5px;
+    /* background-color: aquamarine; */
+    font-family: interGoogle, Arial, Helvetica, sans-serif;
+}
+
+
+header {
+    /* margin: 2px; */
+    /* padding: 15px 15px 15px 30px; */
+    height: 7vh;
+    padding-left: 25px;
+    color: white;
+    background-color: rgb(82, 82, 82);
+    font-size: 24px;
+    font-family: interGoogle, Arial, Helvetica, sans-serif;
+
+    display: flex;
+    /* justify-content: center; */
+    position: relative;
+    align-items: center;
+}
+
+#title {
+    display: inline;
+}
+
+#user_icon {
+    position: absolute;
+    right: 15px;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background-color: #cfcdcd;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#icon_content {
+    text-align: center;
+}
+
+#navigation {
+    height: 93vh;
+    background-color: rgb(235, 234, 234);
+    display: inline;
+    width: 4%;
+    float: left;
+}
+
+#home {
+    /* background-color: aqua; */
+    padding: 30px 0;
+    text-align: center;
+}
+
+#settings {
+    /* background-color: rgb(33, 73, 73); */
+    /* padding: 30px 0; */
+    text-align: center;
+}
+
+#help {
+    padding: 10px 0;
+    text-align: center;
+    position: absolute;
+    width: 4%;
+    display: block;
+    /* background-color: blue; */
+    bottom: 0;
+}
+
+section {
+    height: 93vh;
+    float: left;
+    width: 96%;
+    background-color: #cfcdcd;
+    position: relative;
+}
+
+#greeting-area {
+    float: left;
+    height: 94%;
+    width: 55%;
+    display: inline;
+    padding-left: 20px;
+    box-sizing: border-box;
+    /* background-color: rgb(200, 200, 200); */
+}
+
+#hello-greet {
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 42px;
+
+    font-family: interGoogle, Arial, Helvetica, sans-serif;
+    margin-bottom: 5px;
+    /* background-color: brown; */
+}
+
+#greeting-text {
+    font-size: 14px;
+    /* background-color: blue; */
+    padding-left: 20px;
+    font-family: interGoogle, Arial, Helvetica, sans-serif;
+}
+
+#date {
+    font-size: 20px;
+    padding-left: 20px;
+    font-family: interGoogle, Arial, Helvetica, sans-serif;
+}
+
+#temp {
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* background-color: brown; */
+    font-family: interGoogle, Arial, Helvetica, sans-serif;
+}
+
+#temp-text {
+    display: inline;
+    float: left;
+}
+
+#cloud-image {
+    float: left;
+    padding-left: 10px;
+    display: inline;
+}
+
+#todo {
+    float: left;
+    height: 94%;
+    width: 45%;
+    box-sizing: border-box;
+    /* background-color: rgb(235, 234, 234); */
+    display: inline;
+}
+
+#todo-list {
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    height: 96%;
+    box-sizing: border-box;
+    /* background-color: burlywood; */
+    border-left: 2px solid rgb(149, 149, 149);
+    overflow: auto;
+}
+
+
+#todo::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.todo-items {
+    padding: 15px;
+    background-color: rgb(236, 236, 236);
+    margin-bottom: 2px;
+
+}
+
+#todo-title {
+    font-size: 20px;
+    font-family: interGoogle, Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#todo-date {
+    display: inline;
+}
+
+#action {
+    padding-left: 100px;
+    display: inline;
+}
+
+#todo-text {
+    padding: 0;
+    margin-top: 3px;
+    margin-bottom: 26px;
+
+}
+
+
+footer {
+    /* position: absolute;
+    bottom: 0; */
+    background-color: rgb(219, 216, 216);
+    height: 6%;
+    border-top: 2px solid rgb(172, 172, 172);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#copy-right {}
+
+
+
+@media screen and (max-width: 800px) {
+    #greeting-area, #todo {
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+
+    }
+
+    #todo{
+        padding-top: 30px;
+    }
+}
