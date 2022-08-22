@@ -4,17 +4,21 @@
 }
 
 
-body {
-    margin: 5px 5px 0px 5px;
+html,body {
+    margin: 0;
+    height: 100%;
     /* background-color: aquamarine; */
     font-family: interGoogle, Arial, Helvetica, sans-serif;
 }
 
+*{
+    box-sizing: border-box;
+}
 
 header {
     /* margin: 2px; */
     /* padding: 15px 15px 15px 30px; */
-    height: 7vh;
+    height: 50px;
     padding-left: 25px;
     color: white;
     background-color: rgb(82, 82, 82);
@@ -22,8 +26,7 @@ header {
     font-family: interGoogle, Arial, Helvetica, sans-serif;
 
     display: flex;
-    /* justify-content: center; */
-    position: relative;
+    /* position: relative; */
     align-items: center;
 }
 
@@ -47,47 +50,73 @@ header {
     text-align: center;
 }
 
+#all-content-container{
+    display: block;
+    height: calc(100%-50px);
+    height: -webkit-calc(100% - (20px + 30px));
+    width: 100%;
+    background-color: aquamarine;
+}
+
 #navigation {
-    height: 93vh;
     background-color: rgb(235, 234, 234);
-    display: inline;
-    width: 4%;
+    display: flex;
+    height: 100%;
+    width: 50px;
+    /* background-color: blue; */
+    /* position: relative; */
     float: left;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+#navigation div:last-child{
+    /* display: flex; */
+    /* justify-content: flex-end; */
+    margin-top: auto ;
+    margin-bottom: 12px;
 }
 
 #home {
     /* background-color: aqua; */
-    padding: 30px 0;
-    text-align: center;
+    /* padding: 30px 0;
+    text-align: center; */
+    margin: 20px 10px;
 }
 
 #settings {
     /* background-color: rgb(33, 73, 73); */
     /* padding: 30px 0; */
-    text-align: center;
+    /* text-align: center; */
+    margin: 20px 10px;
+    
 }
 
 #help {
-    padding: 10px 0;
+    /* padding: 10px 0;
     text-align: center;
     position: absolute;
     width: 4%;
-    display: block;
+    display: block; */
     /* background-color: blue; */
-    bottom: 0;
+    /* bottom: 0; */
+
+
 }
 
 section {
-    height: 93vh;
     float: left;
-    width: 96%;
+    width: calc(100% - 50px);
+    height: 100%;
+    display: inline-block;
     background-color: #cfcdcd;
     position: relative;
+    overflow: hidden;
 }
 
 #greeting-area {
     float: left;
-    height: 94%;
     width: 55%;
     display: inline;
     padding-left: 20px;
@@ -139,10 +168,10 @@ section {
 
 #todo {
     float: left;
-    height: 94%;
     width: 45%;
     box-sizing: border-box;
-    /* background-color: rgb(235, 234, 234); */
+    height: 100%;
+    /* background-color: rgb(127, 91, 91); */
     display: inline;
 }
 
@@ -151,26 +180,23 @@ section {
     margin-top: 10px;
     margin-bottom: 5px;
     margin-right: 10px;
-    height: 96%;
     box-sizing: border-box;
+    height: calc(100%-50px);
+    height: -webkit-calc(100% - (20px + 30px));
+
     /* background-color: burlywood; */
     border-left: 2px solid rgb(149, 149, 149);
     overflow: auto;
 }
 
 
-#todo::after {
-    content: "";
-    display: table;
-    clear: both;
-}
+
 
 
 .todo-items {
     padding: 15px;
     background-color: rgb(236, 236, 236);
     margin-bottom: 2px;
-
 }
 
 #todo-title {
@@ -198,10 +224,10 @@ section {
 
 
 footer {
-    /* position: absolute;
-    bottom: 0; */
+    position: fixed;
+    bottom: 0;
     background-color: rgb(219, 216, 216);
-    height: 6%;
+    height: 50px;
     border-top: 2px solid rgb(172, 172, 172);
     display: flex;
     width: 100%;
@@ -209,7 +235,9 @@ footer {
     align-items: center;
 }
 
-#copy-right {}
+#copy-right {
+    
+}
 
 
 
@@ -221,5 +249,13 @@ footer {
 
     #todo{
         padding-top: 30px;
+        height: fit-content;
     }
+
+    #todo-list{
+
+    }
+
+
+
 }
