@@ -3,7 +3,6 @@
     src: url(static/Inter-Regular.ttf);
 }
 
-
 html,body {
     margin: 0;
     height: 100%;
@@ -21,7 +20,6 @@ header {
     color: white;
     background-color: rgb(82, 82, 82);
     font-size: 24px;
-    font-family: interGoogle, Arial, Helvetica, sans-serif;
     display: flex;
     align-items: center;
 }
@@ -94,7 +92,6 @@ header {
     display: inline;
     padding-left: 20px;
     box-sizing: border-box;
-    /* background-color: rgb(200, 200, 200); */
 }
 
 #hello-greet {
@@ -104,7 +101,6 @@ header {
 
     font-family: interGoogle, Arial, Helvetica, sans-serif;
     margin-bottom: 5px;
-    /* background-color: brown; */
 }
 
 #greeting-text {
@@ -177,6 +173,15 @@ header {
     display: inline;
 }
 
+
+#todo-action-container{
+    display: flex;
+}
+
+#todo-action-container div:last-child{
+    margin-left: auto;
+}
+
 #action {
     padding-left: 100px;
     display: inline;
@@ -223,6 +228,5 @@ footer {
         height: auto;
     }
     
-
  
 }
