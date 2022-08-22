@@ -168,7 +168,6 @@ header {
 }
 
 #action {
-    padding-left: 100px;
     display: inline;
 }
 
@@ -201,7 +200,6 @@ footer {
         width: 100%;
 
     }
-
     #section {
         height: 100%;
         overflow: auto;
