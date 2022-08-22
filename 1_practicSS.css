@@ -55,6 +55,7 @@ header {
     height: calc(100%-50px);
     height: -webkit-calc(100% - (20px + 30px));
     width: 100%;
+    overflow: auto;
     background-color: aquamarine;
 }
 
@@ -79,40 +80,23 @@ header {
 }
 
 #home {
-    /* background-color: aqua; */
-    /* padding: 30px 0;
-    text-align: center; */
     margin: 20px 10px;
 }
 
 #settings {
-    /* background-color: rgb(33, 73, 73); */
-    /* padding: 30px 0; */
-    /* text-align: center; */
     margin: 20px 10px;
     
 }
 
-#help {
-    /* padding: 10px 0;
-    text-align: center;
-    position: absolute;
-    width: 4%;
-    display: block; */
-    /* background-color: blue; */
-    /* bottom: 0; */
 
-
-}
-
-section {
+#section {
     float: left;
     width: calc(100% - 50px);
     height: 100%;
     display: inline-block;
     background-color: #cfcdcd;
     position: relative;
-    overflow: hidden;
+    overflow: auto;
 }
 
 #greeting-area {
@@ -170,7 +154,8 @@ section {
     float: left;
     width: 45%;
     box-sizing: border-box;
-    height: 100%;
+    /* height: 100%; */
+    height: auto;
     /* background-color: rgb(127, 91, 91); */
     display: inline;
 }
@@ -181,16 +166,13 @@ section {
     margin-bottom: 5px;
     margin-right: 10px;
     box-sizing: border-box;
-    height: calc(100%-50px);
-    height: -webkit-calc(100% - (20px + 30px));
-
+    height: auto;
+    /* height: calc(100%-50px);
+    height: -webkit-calc(100% - (20px + 30px)); */
     /* background-color: burlywood; */
     border-left: 2px solid rgb(149, 149, 149);
-    overflow: auto;
+    /* overflow: auto; */
 }
-
-
-
 
 
 .todo-items {
@@ -235,9 +217,7 @@ footer {
     align-items: center;
 }
 
-#copy-right {
-    
-}
+
 
 
 
@@ -247,15 +227,5 @@ footer {
 
     }
 
-    #todo{
-        padding-top: 30px;
-        height: fit-content;
-    }
-
-    #todo-list{
-
-    }
-
-
-
+ 
 }
