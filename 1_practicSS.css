@@ -7,7 +7,6 @@
 html,body {
     margin: 0;
     height: 100%;
-    /* background-color: aquamarine; */
     font-family: interGoogle, Arial, Helvetica, sans-serif;
 }
 
@@ -16,17 +15,14 @@ html,body {
 }
 
 header {
-    /* margin: 2px; */
-    /* padding: 15px 15px 15px 30px; */
+
     height: 50px;
     padding-left: 25px;
     color: white;
     background-color: rgb(82, 82, 82);
     font-size: 24px;
     font-family: interGoogle, Arial, Helvetica, sans-serif;
-
     display: flex;
-    /* position: relative; */
     align-items: center;
 }
 
@@ -55,7 +51,6 @@ header {
     height: calc(100%-50px);
     height: -webkit-calc(100% - (20px + 30px));
     width: 100%;
-    overflow: auto;
     background-color: aquamarine;
 }
 
@@ -64,17 +59,12 @@ header {
     display: flex;
     height: 100%;
     width: 50px;
-    /* background-color: blue; */
-    /* position: relative; */
     float: left;
     flex-direction: column;
     text-align: center;
-
 }
 
 #navigation div:last-child{
-    /* display: flex; */
-    /* justify-content: flex-end; */
     margin-top: auto ;
     margin-bottom: 12px;
 }
@@ -96,7 +86,6 @@ header {
     display: inline-block;
     background-color: #cfcdcd;
     position: relative;
-    overflow: auto;
 }
 
 #greeting-area {
@@ -154,9 +143,7 @@ header {
     float: left;
     width: 45%;
     box-sizing: border-box;
-    /* height: 100%; */
-    height: auto;
-    /* background-color: rgb(127, 91, 91); */
+    height: 100%;
     display: inline;
 }
 
@@ -166,12 +153,10 @@ header {
     margin-bottom: 5px;
     margin-right: 10px;
     box-sizing: border-box;
-    height: auto;
-    /* height: calc(100%-50px);
-    height: -webkit-calc(100% - (20px + 30px)); */
-    /* background-color: burlywood; */
+    height: calc(100%-50px);
+    height: -webkit-calc(100% - (20px + 30px));
     border-left: 2px solid rgb(149, 149, 149);
-    /* overflow: auto; */
+    overflow: auto;
 }
 
 
@@ -219,13 +204,25 @@ footer {
 
 
 
-
-
 @media screen and (max-width: 800px) {
     #greeting-area, #todo {
       width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
 
     }
+
+    #section {
+        height: 100%;
+        overflow: auto;
+    }
+
+    #todo-list {
+        height: auto;
+    }
+
+    #todo {
+        height: auto;
+    }
+    
 
  
 }
