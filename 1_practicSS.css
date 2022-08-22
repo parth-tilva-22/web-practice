@@ -1,20 +1,15 @@
-@font-face {
-    font-family: interGoogle;
-    src: url(static/Inter-Regular.ttf);
-}
-
-html,body {
+html,
+body {
     margin: 0;
     height: 100%;
-    font-family: interGoogle, Arial, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
-*{
+* {
     box-sizing: border-box;
 }
 
 header {
-
     height: 50px;
     padding-left: 25px;
     color: white;
@@ -44,12 +39,11 @@ header {
     text-align: center;
 }
 
-#all-content-container{
+#all-content-container {
     display: block;
     height: calc(100%-50px);
     height: -webkit-calc(100% - (20px + 30px));
     width: 100%;
-    background-color: aquamarine;
 }
 
 #navigation {
@@ -62,8 +56,8 @@ header {
     text-align: center;
 }
 
-#navigation div:last-child{
-    margin-top: auto ;
+#navigation div:last-child {
+    margin-top: auto;
     margin-bottom: 12px;
 }
 
@@ -73,7 +67,7 @@ header {
 
 #settings {
     margin: 20px 10px;
-    
+
 }
 
 
@@ -91,37 +85,29 @@ header {
     width: 55%;
     display: inline;
     padding-left: 20px;
-    box-sizing: border-box;
 }
 
 #hello-greet {
     margin-top: 30px;
     margin-left: 20px;
     font-size: 42px;
-
-    font-family: interGoogle, Arial, Helvetica, sans-serif;
     margin-bottom: 5px;
 }
 
 #greeting-text {
     font-size: 14px;
-    /* background-color: blue; */
     padding-left: 20px;
-    font-family: interGoogle, Arial, Helvetica, sans-serif;
 }
 
 #date {
     font-size: 20px;
     padding-left: 20px;
-    font-family: interGoogle, Arial, Helvetica, sans-serif;
 }
 
 #temp {
     font-size: 20px;
     padding-left: 20px;
     padding-right: 20px;
-    /* background-color: brown; */
-    font-family: interGoogle, Arial, Helvetica, sans-serif;
 }
 
 #temp-text {
@@ -148,10 +134,10 @@ header {
     margin-top: 10px;
     margin-bottom: 5px;
     margin-right: 10px;
-    box-sizing: border-box;
     height: calc(100%-50px);
     height: -webkit-calc(100% - (20px + 30px));
     border-left: 2px solid rgb(149, 149, 149);
+    font-weight: 500;
     overflow: auto;
 }
 
@@ -164,7 +150,6 @@ header {
 
 #todo-title {
     font-size: 20px;
-    font-family: interGoogle, Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -174,11 +159,11 @@ header {
 }
 
 
-#todo-action-container{
+#todo-action-container {
     display: flex;
 }
 
-#todo-action-container div:last-child{
+#todo-action-container div:last-child {
     margin-left: auto;
 }
 
@@ -210,8 +195,10 @@ footer {
 
 
 @media screen and (max-width: 800px) {
-    #greeting-area, #todo {
-      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+
+    #greeting-area,
+    #todo {
+        width: 100%;
 
     }
 
@@ -227,6 +214,6 @@ footer {
     #todo {
         height: auto;
     }
-    
- 
+
+
 }
