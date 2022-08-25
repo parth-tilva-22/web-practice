@@ -1,8 +1,68 @@
-html,body {
+html,
+body {
     margin: 0;
     height: 100%;
     font-family: 'Inter', sans-serif;
+    position: relative;
+
 }
+
+.add-task-dialog  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: none;
+    transform: translate(-50%, -50%);
+    background-color: rgb(222, 222, 222);
+    height: 60%;
+    width: 50%;
+    box-shadow: 10px 10px 5px rgb(87, 87, 87);
+    border-radius: 10px;
+    text-align: center;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+#close-icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* font-size: 30px; */
+    border: 2px solid black;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    align-items: center;
+    border-radius: 50%;
+}
+
+
+
+/* #title{
+   
+} */
+
+
+#task-text-area{
+  
+}
+
+.add-task-btn{
+
+    padding: 10px 20px;
+    margin: 150px 10px 0px ;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* #task-text-area #title{
+    width: 90%;
+    height: 10%;
+    top: 8%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} */
+
+
 
 * {
     box-sizing: border-box;
@@ -66,8 +126,32 @@ header {
 
 #settings {
     margin: 20px 10px;
-
 }
+
+#add{
+    margin: 20px 10px;
+    
+        /* font-size: 30px; */
+        border: 2px solid black;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+        align-items: center;
+        border-radius: 50%;
+    
+}
+
+
+#add:active{
+    background-color: rgb(144, 144, 144);
+}
+
+#close-icon:active{
+    background-color: rgb(122, 122, 122);
+}
+
 
 
 #section {
@@ -76,7 +160,7 @@ header {
     height: 100%;
     display: inline-block;
     background-color: #cfcdcd;
-    position: relative;
+    /* position: relative; */
 }
 
 #greeting-area {
@@ -140,7 +224,6 @@ header {
     overflow: auto;
 }
 
-
 .todo-items {
     padding: 15px;
     background-color: rgb(236, 236, 236);
@@ -170,12 +253,16 @@ header {
     display: inline;
 }
 
+#edit-task, #delete-task, #complete-task{
+    display: inline;
+    padding: 0px 10px;
+}
+
 #todo-text {
     padding: 0;
     margin-top: 3px;
     margin-bottom: 26px;
 }
-
 
 footer {
     position: fixed;
@@ -196,6 +283,7 @@ footer {
         width: 100%;
 
     }
+
     #section {
         height: 100%;
         overflow: auto;
