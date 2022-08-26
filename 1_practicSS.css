@@ -39,13 +39,18 @@ body {
 
 
 
-/* #title{
-   
-} */
+#task-title{
+    width: 80%;
+}
 
 
 #task-text-area{
-  
+    /* width: 100%; */
+    height:14vh;
+    width: 60%;
+    
+    /* height: 100%; */
+    /* margin: 0 10px 40px 10px ,40px; */
 }
 
 .add-task-btn{
@@ -281,7 +286,11 @@ footer {
     #greeting-area,
     #todo {
         width: 100%;
+    }
 
+    #task-text-area{
+        width: 100%;
+        height: 100%;
     }
 
     #section {

@@ -143,9 +143,6 @@ function deleteTask(par,i) {
 function clear1() {
     document.getElementById("task-text-area").value = "";
     document.getElementById("task-title").value = "";
-
-
-
     
 }
 
