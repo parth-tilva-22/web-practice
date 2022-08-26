@@ -10,13 +10,13 @@ function onLoadAction() {
 }
 
 
-function add() {
+function add(isEdit,i=-1) {
+
     if (typeof (Storage) !== "undefined") {
         let tList = [];
         if (localStorage.getItem("taskList") == null) {
             alert("this is first");
         } else {
-            //alert("this is not first");
             jsonStr = localStorage.getItem("taskList");  // array of tasks
             tList = JSON.parse(jsonStr)
         }
@@ -26,14 +26,12 @@ function add() {
 
         let currentTask = new Task(title, taskText);
 
+        if(i!=-1){
+            tList.splice(i,1,currentTask);
+        }else{
+            tList.push(currentTask);
+        }
 
-        // if(tasks.length==null){
-        //     tasks
-        // }else{
-        //     tasks.push(currentTask);
-        // }
-
-        tList.push(currentTask);
 
         const json = JSON.stringify(tList);
         localStorage.setItem("taskList", json);
@@ -41,9 +39,6 @@ function add() {
         closeDialog();
 
         showList();
-
-
-        //alert(localStorage.getItem("taskList"));
 
     }
     else {
@@ -61,12 +56,11 @@ function showList() {
     let jsonStr = localStorage.getItem("taskList");  // array of tasks
     console.log(jsonStr);
 
-    let tList = JSON.parse(jsonStr)
+    let tList = JSON.parse(jsonStr);
 
     console.log(tList.length);
 
     document.getElementById("todo-list").innerHTML = "";
-
 
 
     let len = tList.length;
@@ -90,7 +84,7 @@ function showList() {
     
             <div id="action">
     
-                <div id="edit-task" onclick="editTask(this,i)">
+                <div id="edit-task" onclick="editTask(this,${i})">
                     <i class="fa-solid fa-pen"></i>
                     <span>
                         Edit
@@ -104,7 +98,7 @@ function showList() {
                     </span>
     
                 </div>
-                <div id="complete-task" onclick="completeTask(this,i)">
+                <div id="complete-task" onclick="completeTask(this,${i})">
                     <i class="fa-solid fa-check"></i>
                     <span>
                         Complete
@@ -119,18 +113,18 @@ function showList() {
     }
 }
 
+function editTask(par,i){
+    show(true,i);
+    let jsonStr = localStorage.getItem("taskList");  // array of tasks
+    let tList = JSON.parse(jsonStr);
+    let title = document.getElementById("task-title").value=tList[i].title;
+    let taskText = document.getElementById("task-text-area").value=tList[i].taskText;
+}
+
+
+
 
 function deleteTask(par,i) {
-    // let todoItem = par.parentNode.parentNode.parentNode;
-    // let title = todoItem.getElementById("todo-action-container").value;
-    
-
-    // let jsonStr = localStorage.getItem("taskList");  // array of tasks
-
-    // let tList = JSON.parse(jsonStr);
-
-    // console.log(title)
-    // console.log(todoItem);
 
     let jsonStr = localStorage.getItem("taskList");  // array of tasks
     // console.log(jsonStr);
@@ -147,17 +141,28 @@ function deleteTask(par,i) {
 }
 
 function clear1() {
-    // document.getElementById("task-text-area").innerText = "";
+    document.getElementById("task-text-area").value = "";
+    document.getElementById("task-title").value = "";
+
+
+
+    
 }
 
 function closeDialog() {
-    // alert("close called");
     document.getElementById("dialog-box").style.display = "none";
 
 }
 
-function show() {
+function show(isEdit,i) {
     document.getElementById("dialog-box").style.display = "block";
+    if(isEdit){
+        document.getElementById("add-task-btn").innerHTML = "Save";
+        document.getElementById("add-task-btn").setAttribute("onclick",`add(true,${i})`);
+    }else{
+        document.getElementById("add-task-btn").innerHTML = "Add";
+        document.getElementById("add-task-btn").setAttribute("onclick",`add(true,${i})`);
+    }
 }
 
 

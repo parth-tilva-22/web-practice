@@ -14,8 +14,8 @@ body {
     display: none;
     transform: translate(-50%, -50%);
     background-color: rgb(222, 222, 222);
-    height: 60%;
-    width: 50%;
+    height: 40%;
+    width: 40%;
     box-shadow: 10px 10px 5px rgb(87, 87, 87);
     border-radius: 10px;
     text-align: center;
@@ -51,7 +51,7 @@ body {
 .add-task-btn{
 
     padding: 10px 20px;
-    margin: 150px 10px 0px ;
+    margin: 30px 10px 0px ;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
