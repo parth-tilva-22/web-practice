@@ -90,28 +90,27 @@ function showList() {
     
             <div id="action">
     
-                <div id="edit-task" onclick="editTask(this)">
+                <div id="edit-task" onclick="editTask(this,i)">
                     <i class="fa-solid fa-pen"></i>
                     <span>
                         Edit
                     </span>
     
                 </div>
-                <div id="delete-task" onclick="deleteTask(this)">
+                <div id="delete-task" onclick="deleteTask(this,${i})">
                     <i class="fa-solid fa-xmark"></i>
                     <span>
                         Remove
                     </span>
     
                 </div>
-                <div id="complete-task" onclick="completeTask(this)">
+                <div id="complete-task" onclick="completeTask(this,i)">
                     <i class="fa-solid fa-check"></i>
                     <span>
                         Complete
                     </span>
                 </div>
             </div>
-    
         </div>
     </div>`
 
@@ -121,22 +120,34 @@ function showList() {
 }
 
 
-function deleteTask(par) {
-    let todoItem = par.parentNode.parentNode.parentNode;
-    let title = todoItem.getElementsByTagName("p")[0].value;
+function deleteTask(par,i) {
+    // let todoItem = par.parentNode.parentNode.parentNode;
+    // let title = todoItem.getElementById("todo-action-container").value;
     
 
+    // let jsonStr = localStorage.getItem("taskList");  // array of tasks
+
+    // let tList = JSON.parse(jsonStr);
+
+    // console.log(title)
+    // console.log(todoItem);
+
     let jsonStr = localStorage.getItem("taskList");  // array of tasks
-    console.log(jsonStr);
+    // console.log(jsonStr);
 
     let tList = JSON.parse(jsonStr);
 
+    tList.splice(i,1);
 
+    const json = JSON.stringify(tList);
+    localStorage.setItem("taskList", json);
+    showList();
+    // alert("delete called");
+    
 }
 
 function clear1() {
-    document.getElementById("task-text-area").innerText = "parth tilva";
-    alert("clear  testing clicked");
+    // document.getElementById("task-text-area").innerText = "";
 }
 
 function closeDialog() {
